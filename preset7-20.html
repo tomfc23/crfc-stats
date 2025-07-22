@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Central Raleigh FC - Game 1</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #1a1a1a;
+      color: #aaf8f8;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    header {
+      background-color: #262626;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header img {
+      height: 100px;
+      vertical-align: middle;
+      margin-right: 20px;
+    }
+
+    header h1 {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 2.5em;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 20px;
+    }
+
+    .box {
+      background-color: #2a2a2a;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 15px;
+      flex: 1 1 360px;
+      max-width: 500px;
+    }
+
+    .stat-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    .stat-table td {
+      padding: 6px 10px;
+      text-align: center;
+    }
+
+    .highlight-t1 {
+      background-color: #1e90ff;
+      color: white;
+      border-radius: 6px;
+    }
+
+    .highlight-t2 {
+      background-color: #32cd32;
+      color: white;
+      border-radius: 6px;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .home-button {
+      background-color: black;
+      color: #aaf8f8;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1em;
+      margin: 20px;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+
+    .home-button:hover {
+      background-color: #333;
+    }
+
+    .gps-img, .lineup-img, .shotmap-img {
+      width: 100%;
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 1.4em;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Logo" />
+    <h1>CENTRAL RALEIGH FC STATS</h1>
+  </header>
+
+  <div class="center">
+    <button class="home-button" onclick="window.location.href='index.html'">🏠 HOME</button>
+  </div>
+
+  <div class="container">
+    <!-- Game Stats -->
+    <div class="box">
+      <h2 class="section-title">GAME STATS</h2>
+      <table class="stat-table">
+        <tr><td><strong>TEAM 1</strong></td><td></td><td><strong>TEAM 2</strong></td></tr>
+        <tr><td>6</td><td>Shots</td><td class="highlight-t2">8</td></tr>
+        <tr><td>1</td><td>Shots on target</td><td class="highlight-t2">2</td></tr>
+        <tr><td class="highlight-t1">69%</td><td>Possession</td><td>31%</td></tr>
+        <tr><td class="highlight-t1">347</td><td>Passes</td><td>145</td></tr>
+        <tr><td class="highlight-t1">91%</td><td>Pass accuracy</td><td>81%</td></tr>
+        <tr><td>5</td><td>Fouls</td><td class="highlight-t2">6</td></tr>
+        <tr><td>2</td><td>Yellow cards</td><td class="highlight-t2">1</td></tr>
+        <tr><td>0</td><td>Red cards</td><td>0</td></tr>
+        <tr><td class="highlight-t1">1</td><td>Offsides</td><td>0</td></tr>
+        <tr><td>2</td><td>Corners</td><td class="highlight-t2">4</td></tr>
+      </table>
+    </div>
+
+    <!-- GPS Highlight -->
+    <div class="box">
+      <h2 class="section-title">GPS HIGHLIGHT</h2>
+      <p>#6 – Tommy Krapf (AM)</p>
+      <p>TD – 4.65 mi<br>YDS/MIN – 76 yds<br>MAX SPEED – 7.52 yd/s</p>
+      <img src="gps-heatmap.jpg" alt="GPS Heatmap" class="gps-img">
+    </div>
+
+    <!-- Starting Lineup -->
+    <div class="box">
+      <h2 class="section-title">STARTING LINEUP</h2>
+      <img src="lineup.jpg" alt="Starting Lineup" class="lineup-img">
+    </div>
+
+    <!-- Shot Map -->
+    <div class="box">
+      <h2 class="section-title">SHOT MAP<br><span style="font-size:0.9em;">team 1 / team 2</span></h2>
+      <img src="shotmap.jpg" alt="Shot Map" class="shotmap-img">
+      <p class="center" style="margin-top:8px;">CLICK ON A SHOT TO SHOW DETAILS</p>
+    </div>
+  </div>
+</body>
+</html>
