@@ -8,35 +8,19 @@
     body {
       margin: 0;
       padding: 0;
-      background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
-      color: #e0f7fa;
+      background: linear-gradient(135deg, #222 0%, #444 100%);
+      color: #aaf8f8;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       min-height: 100vh;
     }
 
     header {
-      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+      background: #232323;
       padding: 30px 20px;
       text-align: center;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
       position: relative;
       overflow: hidden;
-    }
-
-    header::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="80" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="60" cy="30" r="1.5" fill="rgba(255,255,255,0.1)"/></svg>');
-      animation: float 20s ease-in-out infinite;
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0px) rotate(0deg); }
-      50% { transform: translateY(-10px) rotate(180deg); }
     }
 
     header img {
@@ -44,7 +28,7 @@
       vertical-align: middle;
       margin-right: 20px;
       border-radius: 50%;
-      border: 3px solid rgba(255, 255, 255, 0.3);
+      border: 3px solid #aaf8f8;
       position: relative;
       z-index: 1;
     }
@@ -54,10 +38,9 @@
       vertical-align: middle;
       font-size: 2.2em;
       font-weight: 700;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
       position: relative;
       z-index: 1;
-      background: linear-gradient(45deg, #ffffff, #e0f7fa);
+     background: linear-gradient(45deg, #aaf8f8, #444);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -73,37 +56,19 @@
     }
 
     .box {
-      background: rgba(42, 42, 42, 0.9);
-      backdrop-filter: blur(10px);
+      background: rgba(34, 34, 34, 0.96);
       border-radius: 20px;
       padding: 25px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid #aaf8f8;
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       position: relative;
       overflow: hidden;
     }
 
-    .box::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, #3b82f6, #10b981, #3b82f6);
-      background-size: 200% 100%;
-      animation: shimmer 3s ease-in-out infinite;
-    }
-
-    @keyframes shimmer {
-      0% { background-position: -200% 0; }
-      100% { background-position: 200% 0; }
-    }
-
     .box:hover {
       transform: translateY(-5px);
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
     }
 
     .stat-table {
@@ -112,6 +77,8 @@
       margin-top: 15px;
       border-radius: 10px;
       overflow: hidden;
+      color: #aaf8f8;
+      background: #222;
     }
 
     .stat-table tr {
@@ -119,17 +86,17 @@
     }
 
     .stat-table tr:nth-child(even) {
-      background-color: rgba(255, 255, 255, 0.05);
+      background-color: #2a2a2a;
     }
 
     .stat-table tr:hover {
-      background-color: rgba(59, 130, 246, 0.1);
+      background-color: #333;
     }
 
     .stat-table td {
       padding: 12px 15px;
       text-align: center;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      border-bottom: 1px solid #555;
     }
 
     .stat-table td:first-child,
@@ -143,39 +110,26 @@
     }
 
     .home-button {
-      background: linear-gradient(135deg, #3b82f6, #1e40af);
-      color: white;
-      border: none;
+      background: #232323;
+      color: #aaf8f8;
+      border: 2px solid #aaf8f8;
       padding: 15px 30px;
       font-size: 1.1em;
       font-weight: 600;
       margin: 30px;
       cursor: pointer;
       border-radius: 50px;
-      box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+      box-shadow: 0 4px 15px #111;
       transition: all 0.3s ease;
       position: relative;
       overflow: hidden;
     }
 
-    .home-button::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-      transition: left 0.5s;
-    }
-
-    .home-button:hover::before {
-      left: 100%;
-    }
-
     .home-button:hover {
+      background: #333;
+      color: #fff;
+      border-color: #fff;
       transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(59, 130, 246, 0.6);
     }
 
     .gps-img, .lineup-img {
@@ -183,7 +137,7 @@
       max-width: 100%;
       border-radius: 15px;
       margin-top: 15px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 4px 15px #222;
       transition: transform 0.3s ease;
     }
 
@@ -196,7 +150,7 @@
       font-size: 1.5em;
       font-weight: 700;
       margin-bottom: 15px;
-      background: linear-gradient(45deg, #3b82f6, #10b981);
+      background: linear-gradient(45deg, #aaf8f8, #444);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -204,60 +158,62 @@
 
     .shot-map-container {
       position: relative;
-      background: linear-gradient(135deg, #0f4c3a, #1a5f4a);
+      background: #232323;
       border-radius: 15px;
       padding: 15px;
-      box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.3);
+      box-shadow: inset 0 2px 10px #191919;
     }
 
     canvas {
-      background: linear-gradient(135deg, #065f46, #047857);
+      background: #222;
       border-radius: 10px;
       width: 100%;
       height: 300px;
       cursor: pointer;
-      border: 2px solid rgba(255, 255, 255, 0.2);
+      border: 2px solid #aaf8f8;
       transition: border-color 0.3s ease;
       display: block;
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
     }
 
     canvas:hover {
-      border-color: rgba(59, 130, 246, 0.5);
+      border-color: #fff;
     }
 
     .tooltip {
       position: absolute;
-      background: rgba(26, 26, 26, 0.95);
-      backdrop-filter: blur(10px);
-      color: #e0f7fa;
+      background: #232323;
+      color: #aaf8f8;
       padding: 12px 16px;
       border-radius: 12px;
-      border: 1px solid rgba(59, 130, 246, 0.3);
+      border: 1px solid #aaf8f8;
       display: none;
-      font-size: 0.9em;
+      font-size: 0.95em;
       pointer-events: none;
       z-index: 1000;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-      max-width: 200px;
+      box-shadow: 0 8px 25px #191919;
+      max-width: 220px;
       word-wrap: break-word;
     }
 
     .highlight-t1 {
-      color: #60a5fa;
+      color: #aaf8f8;
       font-weight: 600;
     }
 
     .highlight-t2 {
-      color: #34d399;
+      color: #888;
       font-weight: 600;
     }
 
     .gps-stats {
-      background: rgba(59, 130, 246, 0.1);
+      background: #232323;
       padding: 15px;
       border-radius: 10px;
       margin: 10px 0;
-      border-left: 4px solid #3b82f6;
+      border-left: 4px solid #aaf8f8;
+      color: #aaf8f8;
     }
 
     .shot-legend {
@@ -273,21 +229,48 @@
       align-items: center;
       gap: 8px;
       font-size: 0.9em;
+      color: #aaf8f8;
     }
 
     .legend-color {
       width: 12px;
       height: 12px;
       border-radius: 50%;
-      border: 2px solid #ffffff;
+      border: 2px solid #fff;
     }
 
     .instruction-text {
       text-align: center;
       margin-top: 10px;
       font-size: 0.85em;
-      color: rgba(224, 247, 250, 0.7);
+      color: #888;
       font-style: italic;
+    }
+
+    .shot-info-panel {
+      background: #232323;
+      color: #aaf8f8;
+      border: 1px solid #aaf8f8;
+      border-radius: 12px;
+      padding: 14px 18px;
+      margin-top: 16px;
+      margin-bottom: 10px;
+      font-size: 1em;
+      min-height: 46px;
+    }
+    .shot-number {
+      display: inline-block;
+      background: #aaf8f8;
+      color: #232323;
+      font-weight: bold;
+      font-size: 1em;
+      border-radius: 50%;
+      width: 22px;
+      height: 22px;
+      line-height: 22px;
+      text-align: center;
+      margin-right: 7px;
+      margin-bottom: 2px;
     }
 
     @media (max-width: 768px) {
@@ -296,11 +279,9 @@
         gap: 20px;
         padding: 20px 15px;
       }
-      
       header h1 {
         font-size: 1.8em;
       }
-      
       .box {
         padding: 20px;
       }
@@ -335,7 +316,7 @@
     <!-- GPS Highlight -->
     <div class="box">
       <h2 class="section-title">GPS PERFORMANCE</h2>
-      <p style="font-size: 1.1em; font-weight: 600; color: #60a5fa;">#6 – Tommy Krapf (AM)</p>
+      <p style="font-size: 1.1em; font-weight: 600; color: #aaf8f8;">#6 – Tommy Krapf (AM)</p>
       <div class="gps-stats">
         <p><strong>Total Distance:</strong> 4.65 miles</p>
         <p><strong>Yards/Minute:</strong> 76 yds</p>
@@ -353,24 +334,25 @@
     <!-- Shot Map -->
     <div class="box">
       <h2 class="section-title">SHOT MAP</h2>
-      <p style="text-align: center; margin-bottom: 10px; font-size: 0.9em; color: rgba(224, 247, 250, 0.8);">Final Third View</p>
+      <p style="text-align: center; margin-bottom: 10px; font-size: 0.9em; color: #aaf8f8;">Final Third View</p>
       
       <div class="shot-legend">
         <div class="legend-item">
-          <div class="legend-color" style="background-color: #1e90ff;"></div>
+          <div class="legend-color" style="background-color: #222;"></div>
           <span>Team 1</span>
         </div>
         <div class="legend-item">
-          <div class="legend-color" style="background-color: #32cd32;"></div>
+          <div class="legend-color" style="background-color: #888;"></div>
           <span>Team 2</span>
         </div>
       </div>
 
       <div class="shot-map-container">
         <canvas id="shotMap"></canvas>
+        <div id="shotInfo" class="shot-info-panel"></div>
       </div>
       
-      <p class="instruction-text">Hover or click on shots for details</p>
+      <p class="instruction-text">Hover or click on a shot number for information</p>
     </div>
   </div>
 
@@ -384,51 +366,56 @@
 const canvas = document.getElementById('shotMap');
 const ctx = canvas.getContext('2d');
 const tooltip = document.getElementById('tooltip');
+const shotInfo = document.getElementById('shotInfo');
 
 let hoveredShot = -1;
 let tooltipLocked = false;
 
+// High-res canvas for less blurry display
 function setCanvasSize() {
   const container = canvas.parentElement;
-  const containerWidth = container.clientWidth - 30; // Account for padding
-  canvas.width = containerWidth;
-  canvas.height = 300;
-  canvas.style.width = containerWidth + 'px';
-  canvas.style.height = '300px';
+  const width = container.clientWidth - 30;
+  const height = 300;
+  const dpr = window.devicePixelRatio || 1;
+  canvas.width = width * dpr;
+  canvas.height = height * dpr;
+  canvas.style.width = width + 'px';
+  canvas.style.height = height + 'px';
+  ctx.setTransform(1,0,0,1,0,0); // reset
+  ctx.scale(dpr, dpr);
 }
 
 const shots = [
-  { x: 25, y: 35, team: 'Team 1', outcome: 'miss', note: 'Shot wide left', player: 'Johnson #10', minute: 23 },
-  { x: 45, y: 25, team: 'Team 1', outcome: 'save', note: 'Great save by keeper', player: 'Smith #7', minute: 34 },
-  { x: 35, y: 45, team: 'Team 2', outcome: 'goal', note: 'Bottom right corner', player: 'Garcia #9', minute: 67 },
-  { x: 65, y: 20, team: 'Team 2', outcome: 'save', note: 'Blocked by defender', player: 'Rodriguez #11', minute: 78 },
-  { x: 55, y: 60, team: 'Team 1', outcome: 'miss', note: 'Over the bar', player: 'Wilson #22', minute: 82 },
-  { x: 30, y: 50, team: 'Team 2', outcome: 'goal', note: 'Top left corner', player: 'Martinez #14', minute: 90 }
+  { x: 25, y: 35, team: 'Team 1', outcome: 'miss', note: '.05', player: 'Johnson #10', minute: 23 },
+  { x: 45, y: 25, team: 'Team 1', outcome: 'save', note: '.3', player: 'Smith #7', minute: 34 },
+  { x: 35, y: 45, team: 'Team 2', outcome: 'goal', note: '.1', player: 'Garcia #9', minute: 67 },
+  { x: 65, y: 20, team: 'Team 2', outcome: 'save', note: '.23', player: 'Rodriguez #11', minute: 78 },
+  { x: 55, y: 60, team: 'Team 1', outcome: 'miss', note: '.08', player: 'Wilson #22', minute: 82 },
+  { x: 30, y: 50, team: 'Team 2', outcome: 'goal', note: '.54', player: 'Martinez #14', minute: 90 }
 ];
 
 function percentToCanvasCoords(xPercent, yPercent) {
+  const w = canvas.width / (window.devicePixelRatio || 1);
+  const h = canvas.height / (window.devicePixelRatio || 1);
   return {
-    x: (xPercent / 100) * canvas.width,
-    y: (yPercent / 100) * canvas.height
+    x: (xPercent / 100) * w,
+    y: (yPercent / 100) * h
   };
 }
 
 function drawField() {
-  const width = canvas.width;
-  const height = canvas.height;
+  const width = canvas.width / (window.devicePixelRatio || 1);
+  const height = canvas.height / (window.devicePixelRatio || 1);
 
   // Clear canvas
   ctx.clearRect(0, 0, width, height);
 
   // Field background
-  const gradient = ctx.createLinearGradient(0, 0, 0, height);
-  gradient.addColorStop(0, '#047857');
-  gradient.addColorStop(1, '#065f46');
-  ctx.fillStyle = gradient;
+  ctx.fillStyle = "#232323";
   ctx.fillRect(0, 0, width, height);
 
   // Field markings
-  ctx.strokeStyle = '#ffffff';
+  ctx.strokeStyle = "#888";
   ctx.lineWidth = 2;
 
   // Outer boundary
@@ -451,64 +438,75 @@ function drawField() {
   // Goal
   const goalWidth = width * 0.2;
   const goalX = (width - goalWidth) / 2;
-  ctx.fillStyle = '#ffffff';
+  ctx.fillStyle = "#aaf8f8";
   ctx.fillRect(goalX, height - 5, goalWidth, 8);
 
   // Penalty spot
   ctx.beginPath();
   ctx.arc(width / 2, height - (height * 0.15), 3, 0, 2 * Math.PI);
+  ctx.fillStyle = "#aaf8f8";
   ctx.fill();
 }
 
 function drawShots() {
   shots.forEach((shot, index) => {
     const coords = percentToCanvasCoords(shot.x, shot.y);
-    const radius = hoveredShot === index || (tooltipLocked && hoveredShot === index) ? 10 : 8;
+    // Base color by team
+    let baseColor = shot.team === 'Team 1' ? '#222' : '#888';
+    // Outcome overlay color
+    let strokeColor = "#aaf8f8";
+    let glow = 0;
 
-    // Shot circle
+    // outcome highlight
+    if (shot.outcome === 'goal') {
+      baseColor = '#aaf8f8';
+      strokeColor = "#232323";
+      glow = 20;
+    } else if (shot.outcome === 'save') {
+      baseColor = '#888';
+      strokeColor = "#aaf8f8";
+      glow = 10;
+    }
+
+    const isActive = hoveredShot === index || (tooltipLocked && hoveredShot === index);
+
+    ctx.save();
+    if (isActive) {
+      ctx.shadowColor = baseColor;
+      ctx.shadowBlur = 18;
+    } else if (glow) {
+      ctx.shadowColor = baseColor;
+      ctx.shadowBlur = glow;
+    }
+
+    // Draw shot circle
     ctx.beginPath();
-    ctx.arc(coords.x, coords.y, radius, 0, 2 * Math.PI);
-
-    // Color based on outcome and team
-    let fillColor, strokeColor;
-    switch(shot.outcome) {
-      case 'goal':
-        fillColor = '#10b981';
-        strokeColor = '#ffffff';
-        break;
-      case 'save':
-        fillColor = '#f59e0b';
-        strokeColor = '#ffffff';
-        break;
-      case 'miss':
-      default:
-        fillColor = shot.team === 'Team 1' ? '#1e90ff' : '#32cd32';
-        strokeColor = '#ffffff';
-    }
-
-    // Glow effect for hovered or locked shot
-    if (hoveredShot === index || (tooltipLocked && hoveredShot === index)) {
-      ctx.shadowColor = fillColor;
-      ctx.shadowBlur = 15;
-    }
-
-    ctx.fillStyle = fillColor;
+    ctx.arc(coords.x, coords.y, 18, 0, 2 * Math.PI);
+    ctx.fillStyle = "#232323";
+    ctx.globalAlpha = 0.85;
     ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(coords.x, coords.y, 13, 0, 2 * Math.PI);
+    ctx.fillStyle = baseColor;
+    ctx.globalAlpha = 1.0;
+    ctx.fill();
+
+    ctx.lineWidth = isActive ? 3 : 2;
     ctx.strokeStyle = strokeColor;
-    ctx.lineWidth = 2;
     ctx.stroke();
 
-    // Reset shadow
     ctx.shadowBlur = 0;
+    ctx.restore();
 
-    // Add goal indicator
-    if (shot.outcome === 'goal') {
-      ctx.fillStyle = '#ffffff';
-      ctx.font = 'bold 12px sans-serif';
-      ctx.textAlign = 'center';
-      ctx.textBaseline = 'middle';
-      ctx.fillText('⚽', coords.x, coords.y);
-    }
+    // Draw shot number
+    ctx.save();
+    ctx.font = isActive ? "bold 15px Segoe UI, Arial" : "bold 13px Segoe UI, Arial";
+    ctx.fillStyle = shot.outcome === 'goal' ? "#232323" : "#aaf8f8";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillText((index+1), coords.x, coords.y);
+    ctx.restore();
   });
 }
 
@@ -516,7 +514,7 @@ function getShotAtCoord(mouseX, mouseY) {
   for (let i = 0; i < shots.length; i++) {
     const coords = percentToCanvasCoords(shots[i].x, shots[i].y);
     const distance = Math.sqrt(Math.pow(coords.x - mouseX, 2) + Math.pow(coords.y - mouseY, 2));
-    if (distance <= 12) { // Slightly larger hit area
+    if (distance <= 18) { // Match circle radius
       return i;
     }
   }
@@ -525,22 +523,21 @@ function getShotAtCoord(mouseX, mouseY) {
 
 function showTooltip(pageX, pageY, shotIndex) {
   const shot = shots[shotIndex];
-  const outcomeEmoji = {
-    'goal': '⚽',
-    'save': '🥅',
-    'miss': '❌'
-  };
-
   tooltip.style.left = `${pageX + 15}px`;
   tooltip.style.top = `${pageY - 10}px`;
   tooltip.innerHTML = `
-    <div style="border-bottom: 1px solid rgba(255,255,255,0.2); margin-bottom: 8px; padding-bottom: 5px;">
-      <strong>${shot.team}</strong> ${outcomeEmoji[shot.outcome]}
-      <span style="float:right;cursor:pointer;" id="tooltip-close">&times;</span>
+    <div style="margin-bottom: 5px;">
+      <span class="shot-number">${shotIndex+1}</span>
+      <strong>${shot.team}</strong>
     </div>
-    <div style="margin-bottom: 5px;"><strong>${shot.player}</strong></div>
-    <div style="margin-bottom: 5px; color: #94a3b8;">${shot.minute}'</div>
+    <div><strong>${shot.player}</strong></div>
+    <div style="margin-bottom: 4px;"><span style="color: #888;">${shot.minute}'</span></div>
     <div style="font-style: italic;">${shot.note}</div>
+    <div style="margin-top:6px;">
+      <span style="color: #aaf8f8; font-weight:bold;">Outcome:</span> 
+      ${shot.outcome.charAt(0).toUpperCase() + shot.outcome.slice(1)}
+    </div>
+    <span style="float:right; cursor:pointer; color:#aaf8f8; font-size:1.3em;" id="tooltip-close">&times;</span>
   `;
   tooltip.style.display = 'block';
 
@@ -551,7 +548,7 @@ function showTooltip(pageX, pageY, shotIndex) {
       tooltipLocked = false;
       hideTooltip();
       render();
-      ev.stopPropagation(); // Prevent bubbling to document click
+      ev.stopPropagation();
     };
   }
 }
@@ -559,6 +556,25 @@ function showTooltip(pageX, pageY, shotIndex) {
 function hideTooltip() {
   tooltip.style.display = 'none';
   hoveredShot = -1;
+}
+
+function showShotInfo(shotIndex) {
+  if (shotIndex === -1) {
+    shotInfo.innerHTML = "<span style='color:#888;'>Select or hover a shot for details.</span>";
+    return;
+  }
+  const shot = shots[shotIndex];
+  shotInfo.innerHTML = `
+    <div>
+      <span class="shot-number">${shotIndex+1}</span><strong>${shot.player}</strong>
+      <span style="float:right; color: #888;">${shot.minute}'</span>
+    </div>
+    <div style="margin-top: 6px;">
+      <strong>Team:</strong> ${shot.team}<br>
+      <strong>Outcome:</strong> ${shot.outcome.charAt(0).toUpperCase() + shot.outcome.slice(1)}<br>
+      <strong>xG:</strong> <em>${shot.note}</em>
+    </div>
+  `;
 }
 
 canvas.addEventListener('mousemove', (e) => {
@@ -573,11 +589,13 @@ canvas.addEventListener('mousemove', (e) => {
       hoveredShot = shotIndex;
       canvas.style.cursor = 'pointer';
       showTooltip(e.clientX, e.clientY, shotIndex);
+      showShotInfo(shotIndex);
       render();
     }
   } else {
     if (hoveredShot !== -1) {
       hideTooltip();
+      showShotInfo(-1);
       canvas.style.cursor = 'default';
       render();
     }
@@ -587,6 +605,7 @@ canvas.addEventListener('mousemove', (e) => {
 canvas.addEventListener('mouseleave', () => {
   if (tooltipLocked) return;
   hideTooltip();
+  showShotInfo(-1);
   canvas.style.cursor = 'default';
   render();
 });
@@ -602,10 +621,12 @@ canvas.addEventListener('click', (e) => {
     tooltipLocked = true;
     hoveredShot = shotIndex;
     showTooltip(e.clientX, e.clientY, shotIndex);
+    showShotInfo(shotIndex);
     render();
   } else {
     tooltipLocked = false;
     hideTooltip();
+    showShotInfo(-1);
     render();
   }
 });
@@ -616,6 +637,7 @@ document.addEventListener('click', (e) => {
     if (tooltipLocked) {
       tooltipLocked = false;
       hideTooltip();
+      showShotInfo(-1);
       render();
     }
   }
@@ -630,12 +652,14 @@ function render() {
 function init() {
   setCanvasSize();
   render();
+  showShotInfo(-1);
 }
 
 // Handle window resize
 window.addEventListener('resize', () => {
   setCanvasSize();
   render();
+  showShotInfo(tooltipLocked ? hoveredShot : -1);
 });
 
 // Start when page loads
@@ -644,6 +668,6 @@ if (document.readyState === 'loading') {
 } else {
   init();
 }
-</script>
+  </script>
 </body>
 </html>
