@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Central Raleigh FC Stats</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #1a1a1a;
+      color: #aaf8f8;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    header {
+      background-color: #262626;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header img {
+      height: 100px;
+      vertical-align: middle;
+      margin-right: 20px;
+    }
+
+    header h1 {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 2.5em;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 30px;
+    }
+
+    .box {
+      background-color: #2a2a2a;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 15px;
+      flex: 1 1 300px;
+      max-width: 400px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 15px;
+      color: #aaf8f8;
+    }
+
+    .stats-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .stats-list li {
+      display: flex;
+      justify-content: space-between;
+      margin: 6px 0;
+    }
+
+    .stat-badge {
+      background-color: #3742fa;
+      padding: 2px 8px;
+      border-radius: 8px;
+      color: white;
+      font-size: 0.9em;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+
+    .buttons button {
+      background-color: #000;
+      color: #aaf8f8;
+      border: none;
+      border-radius: 10px;
+      padding: 12px 20px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .buttons button:hover {
+      background-color: #333;
+    }
+
+    .schedule, .leaders {
+      font-size: 0.95em;
+      line-height: 1.6;
+    }
+
+    .leaders ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Central Raleigh FC Logo" />
+    <h1>CENTRAL RALEIGH FC STATS</h1>
+  </header>
+
+  <div class="container">
+    <div class="box">
+      <h2>TEAM AVERAGE STATS</h2>
+      <ul class="stats-list">
+        <li><span>Shots</span><span>6</span></li>
+        <li><span>Shots on target</span><span>1</span></li>
+        <li><span>Possession</span><span class="stat-badge">69%</span></li>
+        <li><span>Passes</span><span class="stat-badge">347</span></li>
+        <li><span>Pass accuracy</span><span class="stat-badge">91%</span></li>
+        <li><span>Fouls</span><span class="stat-badge">5</span></li>
+        <li><span>Yellow cards</span><span>2</span></li>
+        <li><span>Red cards</span><span>0</span></li>
+        <li><span>Offsides</span><span>1</span></li>
+        <li><span>Corners</span><span>2</span></li>
+      </ul>
+    </div>
+
+    <div class="box">
+      <h2>SELECT GAME</h2>
+      <div class="buttons">
+        <button onclick="alert('Game 1 stats coming soon')">GAME 1</button>
+        <button onclick="alert('Game 2 stats coming soon')">GAME 2</button>
+        <button onclick="alert('Game 3 stats coming soon')">GAME 3</button>
+      </div>
+
+      <h2>SCHEDULE</h2>
+      <div class="schedule">
+        <p>2-1 W v. Trident FC</p>
+        <p>1-0 L v. Dark Horse NC</p>
+        <p>HOME v. Tar Devils</p>
+        <p>AWAY v. Wake FC</p>
+      </div>
+    </div>
+
+    <div class="box">
+      <h2>STAT LEADERS</h2>
+      <div class="leaders">
+        <strong>GOALS</strong>
+        <ul>
+          <li>1. D. Henson #11 – 3</li>
+          <li>2. A. Vasudevan #23 – 2</li>
+          <li>3. H. Henson #4 – 2</li>
+        </ul>
+        <strong>ASSISTS</strong>
+        <ul>
+          <li>1. D. Henson #11 – 3</li>
+          <li>2. A. Vasudevan #23 – 2</li>
+          <li>3. H. Henson #4 – 2</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
