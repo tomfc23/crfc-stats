@@ -8,91 +8,242 @@
     body {
       margin: 0;
       padding: 0;
-      background-color: #1a1a1a;
+      background: linear-gradient(135deg, #222 0%, #444 100%);
       color: #aaf8f8;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
     }
 
     header {
-      background-color: #262626;
-      padding: 20px;
+      background: #232323;
+      padding: 30px 20px;
       text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      position: relative;
+      overflow: hidden;
     }
 
     header img {
-      height: 100px;
+      height: 80px;
       vertical-align: middle;
       margin-right: 20px;
+      border-radius: 50%;
+      border: 3px solid #aaf8f8;
+      position: relative;
+      z-index: 1;
     }
 
     header h1 {
       display: inline-block;
       vertical-align: middle;
-      font-size: 2.5em;
+      font-size: 2.2em;
+      font-weight: 700;
+      position: relative;
+      z-index: 1;
+      background: linear-gradient(45deg, #aaf8f8, #444);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
     .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      padding: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 25px;
+      padding: 30px 20px;
+      max-width: 1400px;
+      margin: 0 auto;
     }
 
     .box {
-      background-color: #2a2a2a;
-      border-radius: 12px;
-      padding: 20px;
-      margin: 15px;
-      flex: 1 1 300px;
-      max-width: 400px;
+      background: rgba(34, 34, 34, 0.96);
+      border-radius: 20px;
+      padding: 25px;
+      border: 1px solid #aaf8f8;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
     }
 
-    h2 {
+    .box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .section-title {
       text-align: center;
+      font-size: 1.5em;
+      font-weight: 700;
       margin-bottom: 15px;
-      color: #aaf8f8;
+      background: linear-gradient(45deg, #aaf8f8, #444);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
     .stats-list {
       list-style: none;
       padding: 0;
+      margin: 0;
     }
 
     .stats-list li {
       display: flex;
       justify-content: space-between;
-      margin: 6px 0;
+      margin: 12px 0;
+      padding: 8px 12px;
+      background: #2a2a2a;
+      border-radius: 8px;
+      border-left: 3px solid #aaf8f8;
+      transition: all 0.2s ease;
+    }
+
+    .stats-list li:hover {
+      background: #333;
+      transform: translateX(5px);
+    }
+
+    .stats-list li span:first-child {
+      color: #aaf8f8;
+      font-weight: 500;
+    }
+
+    .stats-list li span:last-child {
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .stat-badge {
+      background: linear-gradient(45deg, #aaf8f8, #666);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 700 !important;
     }
 
     .buttons {
       display: flex;
       justify-content: center;
       gap: 15px;
-      margin-bottom: 15px;
+      margin-bottom: 25px;
+      flex-wrap: wrap;
+    }
+
+    .buttons a {
+      text-decoration: none;
     }
 
     .buttons button {
-      background-color: #000;
+      background: #232323;
       color: #aaf8f8;
-      border: none;
-      border-radius: 10px;
-      padding: 12px 20px;
+      border: 2px solid #aaf8f8;
+      border-radius: 25px;
+      padding: 12px 24px;
       font-size: 1em;
+      font-weight: 600;
       cursor: pointer;
-      transition: background 0.3s;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
     }
 
     .buttons button:hover {
-      background-color: #333;
+      background: #333;
+      color: #fff;
+      border-color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
     }
 
-    .schedule, .leaders {
+    .buttons button:active {
+      transform: translateY(0);
+    }
+
+    .schedule {
+      font-size: 0.95em;
+      line-height: 1.8;
+      margin-top: 20px;
+    }
+
+    .schedule p {
+      margin: 10px 0;
+      padding: 10px 15px;
+      background: #232323;
+      border-radius: 10px;
+      border-left: 4px solid #aaf8f8;
+      transition: all 0.2s ease;
+    }
+
+    .schedule p:hover {
+      background: #2a2a2a;
+      transform: translateX(5px);
+    }
+
+    .leaders {
       font-size: 0.95em;
       line-height: 1.6;
     }
 
+    .leaders strong {
+      display: block;
+      margin: 20px 0 10px 0;
+      font-size: 1.1em;
+      color: #aaf8f8;
+      border-bottom: 2px solid #333;
+      padding-bottom: 5px;
+    }
+
     .leaders ul {
-      padding-left: 20px;
+      padding-left: 0;
+      list-style: none;
+      margin: 0 0 15px 0;
+    }
+
+    .leaders li {
+      padding: 8px 15px;
+      margin: 5px 0;
+      background: #2a2a2a;
+      border-radius: 8px;
+      border-left: 3px solid #aaf8f8;
+      transition: all 0.2s ease;
+    }
+
+    .leaders li:hover {
+      background: #333;
+      transform: translateX(5px);
+    }
+
+    .leaders li:first-child {
+      background: linear-gradient(135deg, #2a2a2a, #333);
+      border-left-color: #aaf8f8;
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px 15px;
+      }
+      
+      header h1 {
+        font-size: 1.8em;
+      }
+      
+      .box {
+        padding: 20px;
+      }
+      
+      .buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .buttons button {
+        width: 100%;
+        max-width: 200px;
+      }
     }
   </style>
 </head>
@@ -101,35 +252,35 @@
     <img src="logo.avif" alt="Central Raleigh FC Logo" />
     <h1>CENTRAL RALEIGH FC STATS</h1>
   </header>
-
+  
   <div class="container">
     <div class="box">
-      <h2>TEAM AVERAGE STATS</h2>
+      <h2 class="section-title">TEAM AVERAGE STATS</h2>
       <ul class="stats-list">
         <li><span>Shots</span><span>6</span></li>
         <li><span>Shots on target</span><span>1</span></li>
         <li><span>Possession</span><span class="stat-badge">69%</span></li>
         <li><span>Passes</span><span class="stat-badge">347</span></li>
         <li><span>Pass accuracy</span><span class="stat-badge">91%</span></li>
-        <li><span>Fouls</span><span class="stat-badge">5</span></li>
+        <li><span>Fouls</span><span>5</span></li>
         <li><span>Yellow cards</span><span>2</span></li>
         <li><span>Red cards</span><span>0</span></li>
         <li><span>Offsides</span><span>1</span></li>
         <li><span>Corners</span><span>2</span></li>
       </ul>
     </div>
-
+    
     <div class="box">
-      <h2>SELECT GAME</h2>
+      <h2 class="section-title">SELECT GAME</h2>
       <div class="buttons">
         <a href="preset7-20.html">
-        <button>Preset</button>
+          <button>PRESET</button>
         </a>
         <button onclick="alert('Game 2 stats coming soon')">GAME 2</button>
         <button onclick="alert('Game 3 stats coming soon')">GAME 3</button>
       </div>
-
-      <h2>SCHEDULE</h2>
+      
+      <h2 class="section-title">SCHEDULE</h2>
       <div class="schedule">
         <p>2-1 W v. Trident FC</p>
         <p>1-0 L v. Dark Horse NC</p>
@@ -137,9 +288,9 @@
         <p>AWAY v. Wake FC</p>
       </div>
     </div>
-
+    
     <div class="box">
-      <h2>STAT LEADERS</h2>
+      <h2 class="section-title">STAT LEADERS</h2>
       <div class="leaders">
         <strong>GOALS</strong>
         <ul>
@@ -147,6 +298,7 @@
           <li>2. A. Vasudevan #23 – 2</li>
           <li>3. H. Henson #4 – 2</li>
         </ul>
+        
         <strong>ASSISTS</strong>
         <ul>
           <li>1. D. Henson #11 – 3</li>
